@@ -12,16 +12,18 @@
 
 <body>
     <div id="app">
-        <h1 class="text-center p-3 mb-3">Todo List</h1>
+        <h1 class="text-center p-3 mb-3 text-light">Todo List</h1>
         <div class="container">
             <div class="tasklist mx-5 p-3">
                 <ul class="list-group list-group-flush w-50 p-3 bg-white rounded-2 m-auto">
-                    <li class="list-group-item">item1</li>
-                    <li class="list-group-item"> item2</li>
-                    <li class="list-group-item"> item3</li>
-                    <li class="list-group-item"> item4</li>
-                    <li class="list-group-item">item5</li>
-                </ul>
+                    <ul class="list-group list-group-flush w-50 p-3 bg-white rounded-2 m-auto">
+                        <li class="list-group-item">item1</li>
+                        <li class="list-group-item">item2</li>
+                        <li class="list-group-item">item3</li>
+                        <li class="list-group-item">item4</li>
+                        <li class="list-group-item">item5</li>
+                    </ul>
+
             </div>
             <div class="addTask p-4">
                 <div class="input-group mb-3 w-50 m-auto">
@@ -31,11 +33,10 @@
                 </div>
             </div>
         </div>
-    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.global.min.js"></script>
-    <script src="./app.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.global.min.js"></script>
+        <script src="./app.js"></script>
 
 </body>
 
