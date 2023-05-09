@@ -8,6 +8,9 @@
     <title>PHP Todo List Json</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
+    <link
+      rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 
 <body>
@@ -16,7 +19,7 @@
         <div class="container">
             <div class="tasklist mx-5 p-3">
                 <ul class="list-group list-group-flush w-50 p-3 bg-white rounded-2 m-auto">
-                <li @click="changeStatus(task)" class="list-group-item" v-for="task in tasks" :class="{strike_out: task.done}">{{task.text}}</li>
+                <li @click="changeStatus(task)" class="list-group-item d-flex justify-content-between" v-for="(task, index) in tasks" :class="{strike_out: task.done}">{{task.text}}<i class="fa-solid fa-trash fa-fw" @click.stop="taskDone(index)"></i></li>
                 </ul>
             </div>
             <div class="addTask p-4">

@@ -37,6 +37,9 @@ createApp({
                 } else {
                     task.done = true
                 }
+            },
+            taskDone(index) {
+                this.tasks.splice(index, 1)
          
         }
     },
