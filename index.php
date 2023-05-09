@@ -8,7 +8,6 @@
     <title>PHP Todo List Json</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
-
 </head>
 
 <body>
@@ -17,13 +16,13 @@
         <div class="container">
             <div class="tasklist mx-5 p-3">
                 <ul class="list-group list-group-flush w-50 p-3 bg-white rounded-2 m-auto">
-                    <li class="list-group-item" v-for="task in tasks">{{task}}</li>
+                <li @click="changeStatus(task)" class="list-group-item" v-for="task in tasks" :class="{strike_out: task.done}">{{task.text}}</li>
                 </ul>
             </div>
             <div class="addTask p-4">
-                <form class="input-group mb-3 w-50 m-auto">
-                    <input type="text" class="form-control" placeholder="New Task..." name="newTask" id="newTask" v-model="newTask">
-                    <button type="submit" class="btn btn-primary" @click="addTask">Add
+            <form action="index.php" method="post" class="input-group mb-3 w-50 m-auto">
+                    <input type="text" class="form-control" placeholder="New Task..." name="newTask" id="newTask" v-model="newTask" @keyup.enter="addTask">
+                    <button type="button" class="btn btn-primary" @click="addTask">Add
                         Task</button>
                 </form>
             </div>

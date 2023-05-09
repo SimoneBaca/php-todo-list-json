@@ -7,3 +7,7 @@ body {
     background-color: darkblue;
 }
 
+.strike_out {
+    text-decoration: line-through;
+    color: grey;
+}
